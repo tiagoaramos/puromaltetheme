@@ -1,0 +1,10 @@
+== Changelog ==
+
+= 1.0.2 =
+* Update: updated translation files
+
+= 1.0.1 =
+* Update: updated WooCommerce templates
+
+= 1.0.0 =
+* New Theme!

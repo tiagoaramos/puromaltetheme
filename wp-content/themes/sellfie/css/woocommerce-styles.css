@@ -1,0 +1,202 @@
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product {
+	width: 30.8%;
+	text-align: left;
+}
+ 
+.related.products ul.products li.product {
+	width: 22.05%;
+	text-align: center;
+}   
+
+.widget.woocommerce li {
+	padding: 7px 0px;
+	border-bottom: 1px dotted #e1e1e1;
+}
+
+.woocommerce ul.products li.product a img {
+	margin-bottom: 0;
+}
+
+.woocommerce ul.products li.product h3 {
+	margin: 12px 0 0;
+	padding: 0;
+	line-height: 1;
+	font-size: 16px;
+}
+
+.woocommerce ul.products li.product .price del {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+span.price {
+    font-size: 13px;
+}
+
+#shop-title {
+	border-bottom: 1px solid #e1e1e1;
+	padding: 50px 0 70px;
+}
+
+#shop-title .page-title {
+	font-size: 500%;
+	color: #000;
+	text-align: center;
+	margin: 0;
+	letter-spacing: -0.05em;
+	line-height: 1;
+}
+
+ul.product-categories span.count {
+	float: right;
+	background: #e1e1e1;
+	font-size: 10px;
+	padding: 2px 10px 3px;
+	border-radius: 100px;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+	margin: -23px 0 30px; !important;
+	font-size: 12px !important; 
+}
+
+.woocommerce-result-count {
+	color: #000;
+	letter-spacing: -0.04em;
+	font-size: 14px;
+}
+
+select.orderby {
+	font-size: 14px;
+}
+
+.woocommerce ul.products li.product .onsale {
+	margin: 0;
+	-webkit-transition: ease-in-out 0.2s;
+	-moz-transition: ease-in-out 0.2s;
+	-o-transition: ease-in-out 0.2s;
+	transition: ease-in-out 0.2s;
+}
+
+.woocommerce span.onsale {
+	border-radius: 0;
+}
+
+ul.page-numbers {
+	font-size: 17px;
+}
+
+.woocommerce nav.woocommerce-pagination {
+	text-align: right;
+}
+
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce nav.woocommerce-pagination ul li {
+	border: none !important;
+} 
+
+.page-numbers.current {
+	background: none !important;
+}
+
+ul.page-numbers li {
+	padding: 4px !important;
+} 
+
+.woocommerce nav.woocommerce-pagination ul li span.current, 
+.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.woocommerce nav.woocommerce-pagination ul li a:focus {
+	background: none !important;
+}
+
+.woocommerce span.onsale { 
+	left: 0;
+	top: 0;
+}
+
+.woocommerce div.product .product_title {
+	font-size: 2.75em;
+	line-height: 1;
+	margin-bottom: 15px;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+	font-size: 2em;
+}
+
+p.price {
+	margin: 5px 0 30px;
+}
+
+.product_meta { font-size: 12px; }
+
+button.single_add_to_cart_button {
+	border-radius: 0 !important;
+	font-size: 12px !important;
+	text-transform: uppercase;
+	padding: 15px 30px !important;
+}
+
+.woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt {
+	color: #fff !important;
+}
+
+.woocommerce div.product div.images, .woocommerce div.product div.summary {
+	margin-bottom: 50px;
+}
+
+.quantity > input { padding: 8px !important; border-radius: 0px !important; }
+.product_meta > span { display: block; padding: 10px 0; border-top: 1px dotted #e1e1e1;}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li:before {
+	box-shadow: none !important; 
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs:before {
+	border: none !important;
+}
+	
+ul.wc-tabs { padding-left: 0 !important; border-top: 1px solid #e1e1e1;}
+
+ul.wc-tabs li.active { border-top: 3px solid #000 !important; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	color: #000;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a { color: #888; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li { border-radius: 0 !important; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before { border: 0 !important; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li { background: none !important; border: none; padding: 0 1.5em !important; }
+
+.wc-tabs-wrapper { border-bottom: 1px solid #e1e1e1; margin-bottom: 80px;}
+
+#reviews > #comments,
+#reviews > #review_form_wrapper { width: 48%; float: left; }
+
+#reviews label { width: 100%; display: block; }
+#reviews input { width: 100% !important; }
+
+@media handheld, only screen and (max-width: 767px) {
+	
+	
+	#shop-title .page-title,
+	.woocommerce div.product .product_title {
+		font-size: 36px;
+	} 
+	
+	#shop-title {
+		padding: 20px 0 40px;
+	}
+	
+	.related.products ul.products li.product,
+	.woocommerce ul.products li.product, 
+	.woocommerce-page ul.products li.product {
+		width: 49.05%; 
+	} 
+}
