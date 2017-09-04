@@ -184,7 +184,7 @@ class WC_Quantities_and_Units {
 		global $post, $woocommerce;
 	
 		// Only display script if we are on a single product or cart page
-		if ( is_object( $post ) and $post->post_type == 'product' or is_cart() ) {
+		if ( is_object( $post ) and $post->post_type == 'product' or is_cart() or  $post->post_name == "request-quote" ) {
 			
 			wp_enqueue_script( 
 				'ipq_validation', 
@@ -193,7 +193,7 @@ class WC_Quantities_and_Units {
 			);
 
 			// Only localize parameters for variable products
-			if ( ! is_cart() ) {
+			if ( ! is_cart() && $post->post_name != "request-quote" ) {
 				
 				// Get the product
 				$pro = get_product( $post );

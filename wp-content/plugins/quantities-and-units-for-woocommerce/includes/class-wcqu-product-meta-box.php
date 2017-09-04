@@ -171,6 +171,7 @@ class WC_Quantities_and_Units_Quantity_Meta_Boxes {
 		// Get the current values if they exist
 		$deactive  = get_post_meta( $post->ID, '_wpbo_deactive', true );
 		$step  = get_post_meta( $post->ID, '_wpbo_step',     true );
+		$label  = get_post_meta( $post->ID, '_wpbo_unit_label',     true );
 		$min   = get_post_meta( $post->ID, '_wpbo_minimum',  true );
 		$max   = get_post_meta( $post->ID, '_wpbo_maximum',  true );
 		$over  = get_post_meta( $post->ID, '_wpbo_override', true );
@@ -189,6 +190,9 @@ class WC_Quantities_and_Units_Quantity_Meta_Boxes {
 			<span>Override Quantity Rules with Values Below</span>
 			
 			<span class='wpbo_product_values' <?php if ( $over != 'on' ) echo "style='display:none'"?>>
+				<label for="_wpbo_unit_label">Per Unit Label</label>
+				<input type="text" name="_wpbo_unit_label" value="<?php echo $label ?>" placeholder="EX: /kg /gr" />
+
 				<label for="_wpbo_step">Step Value</label>
 				<input type="number" name="_wpbo_step" value="<?php echo $step; ?>" step="any" />
 				
@@ -277,6 +281,18 @@ class WC_Quantities_and_Units_Quantity_Meta_Boxes {
 			}
 		}
 		*/
+
+		
+		/* Label */
+		if( isset( $_POST['_wpbo_unit_label'] )) {
+			$label = $_POST['_wpbo_unit_label'];
+			
+			update_post_meta( 
+				$post_id, 
+				'_wpbo_unit_label', 
+				strip_tags( $label )
+			);
+		}
 		
 		if( isset( $_POST['_wpbo_step'] )) {
 			update_post_meta( 

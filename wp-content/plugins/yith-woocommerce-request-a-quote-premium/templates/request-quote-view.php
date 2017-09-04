@@ -21,6 +21,7 @@ else: ?>
 					<th class="product-remove">&nbsp;</th>
 					<th class="product-thumbnail">&nbsp;</th>
 					<th class="product-name"><?php _e( 'Product', 'yith-woocommerce-request-a-quote' ) ?></th>
+					<th class="product-price"><?php _e( 'Preço', 'yith-woocommerce-request-a-quote' ) ?></th>
 					<th class="product-quantity"><?php _e( 'Quantity', 'yith-woocommerce-request-a-quote' ) ?></th>
 					<?php if ( get_option( 'ywraq_hide_total_column', 'yes' ) == 'no' ): ?>
 						<th class="product-subtotal"><?php _e( 'Total', 'yith-woocommerce-request-a-quote' ); ?></th>
@@ -128,21 +129,45 @@ else: ?>
 								echo esc_html( $data['key'] ) . ': ' . wp_kses_post( $data['value'] ) . "\n";
 							}
 						}
+						
+						?>
+					</td>
+					<td class="product-price" data-title="Preço">
+						<?php
+					
+						$price = apply_filters( 'yith_ywraq_product_price_html', WC()->cart->get_product_subtotal( $_product, 1 ), $_product, $raq );
+						echo apply_filters( 'yith_ywraq_hide_price_template', $price, $product_id, $raq);
 
+						if ( class_exists( 'WC_Quantities_and_Units' ) ) {
+							echo get_post_meta($product_id,"_wpbo_unit_label",true);
+						}
 
 						?>
 					</td>
 
-
 					<td class="product-quantity" data-title="Quantity">
 						<?php
-						$product_quantity = woocommerce_quantity_input( array(
-							'input_name'  => "raq[{$key}][qty]",
-							'input_value' => apply_filters( 'ywraq_quantity_input_value', $raq['quantity'] ),
-							'max_value'   => apply_filters( 'ywraq_quantity_max_value', $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(), $_product ),
-							'min_value'   => apply_filters( 'ywraq_quantity_min_value', 0, $_product ),
-							'step'        => apply_filters( 'ywraq_quantity_step_value', 1, $_product )
-						), $_product, false );
+						if ( class_exists( 'WC_Quantities_and_Units' ) ) {
+							
+							$product_quantity = woocommerce_quantity_input( array(
+								'input_name'  => "raq[{$key}][qty]",
+								'input_value' => $raq['quantity'],
+								'max_value'   => apply_filters( 'ywraq_quantity_max_value', $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(), $_product ),
+								'min_value'   => apply_filters( 'ywraq_quantity_min_value', 0, $_product ),
+								//'step'        => apply_filters( 'ywraq_quantity_step_value', 1, $_product )
+							), $_product, false );
+
+						}else{
+							$product_quantity = woocommerce_quantity_input( array(
+								'input_name'  => "raq[{$key}][qty]",
+								'input_value' => apply_filters( 'ywraq_quantity_input_value', $raq['quantity'] ),
+								'max_value'   => apply_filters( 'ywraq_quantity_max_value', $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(), $_product ),
+								'min_value'   => apply_filters( 'ywraq_quantity_min_value', 0, $_product ),
+								'step'        => apply_filters( 'ywraq_quantity_step_value', 1, $_product )
+							), $_product, false );
+
+						}
+
 
 						echo $product_quantity;
 						?>
