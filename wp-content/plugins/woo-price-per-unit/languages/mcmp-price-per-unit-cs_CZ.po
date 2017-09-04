@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Price Per Unit 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-05 11:08+0200\n"
+"PO-Revision-Date: 2017-08-05 11:11+0200\n"
+"Last-Translator: administrator <martin.mechura@mechcomp.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_x;_e;_ex;_n\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: !Snippets\n"
+"X-Poedit-SearchPathExcluded-1: .vscode\n"
+
+#: additional-translations.php:2
+msgid "without VAT"
+msgstr "bez DPH"
+
+#: mcmp-price-per-unit.php:94
+msgid "Settings"
+msgstr "Nastavení"
+
+#: mcmp-price-per-unit.php:104
+msgid "Price per unit"
+msgstr "Cena za jednotku"
+
+#: mcmp-price-per-unit.php:117
+msgid "Local overrides for price recalculation"
+msgstr "Lokální přenastavení přepočtu ceny"
+
+#: mcmp-price-per-unit.php:118
+msgid "These settings will affect only this product despite global settings."
+msgstr ""
+"Tato nastavení ovlivní pouze tento produkt - navzdory obecnému nastavení."
+
+#: mcmp-price-per-unit.php:119
+msgid "Global settings can be found at "
+msgstr "Obecná nastavení lze nalézt zde"
+
+#: mcmp-price-per-unit.php:121
+msgid "<i>WooCommerce -> Settings -> Products -> Price Per Unit</i>"
+msgstr " <i>WooCommerce -> Nastavení -> Produkty -> Cena Za Jednotku</i>"
+
+#: mcmp-price-per-unit.php:126 mcmp-price-per-unit.php:253
+msgid "Shop page price behavior"
+msgstr "Chování na stránce obchodu"
+
+#: mcmp-price-per-unit.php:127 mcmp-price-per-unit.php:254
+msgid "Behaviour of recalculated price on shop page"
+msgstr "Jak se bude chovat přepočítaná cena na stránce obchodu"
+
+#: mcmp-price-per-unit.php:130 mcmp-price-per-unit.php:145
+msgid "Default - according to general settings"
+msgstr "Výchozí - podle obecného nastavení"
+
+#: mcmp-price-per-unit.php:131 mcmp-price-per-unit.php:146
+msgid "Do not recalculate"
+msgstr "Nepřepočítávat"
+
+#: mcmp-price-per-unit.php:132 mcmp-price-per-unit.php:147
+#: mcmp-price-per-unit.php:259 mcmp-price-per-unit.php:273
+msgid "Show recalculated price as new row"
+msgstr "Přidat nový řádek s přepočtem"
+
+#: mcmp-price-per-unit.php:133 mcmp-price-per-unit.php:148
+#: mcmp-price-per-unit.php:260 mcmp-price-per-unit.php:274
+msgid "Replace price view with recalculated"
+msgstr "Přepsat cenu přepočítanou cenou"
+
+#: mcmp-price-per-unit.php:141 mcmp-price-per-unit.php:267
+msgid "Single product page behavior"
+msgstr "Chování na stránce produktu"
+
+#: mcmp-price-per-unit.php:142 mcmp-price-per-unit.php:268
+msgid "Behaviour of recalculated price on single product page"
+msgstr "Jak se bude chovat přepočítaná cena na stránce jednotlivého produktu"
+
+#: mcmp-price-per-unit.php:156 mcmp-price-per-unit.php:281
+msgid "Recalculated price additional text"
+msgstr "Přídavný text pro přepočtenou cenu"
+
+#: mcmp-price-per-unit.php:157
+msgid ""
+"Will be shown immediatelly after recalculated prices. Will be shown ONLY "
+"when recalculation takes place."
+msgstr ""
+"Zobrazí se za přepočtenou cenou. Bude zobrazen POUZE pokud k přepočtu dojde."
+
+#: mcmp-price-per-unit.php:158 mcmp-price-per-unit.php:283
+msgid "Example \"/Kg\""
+msgstr "Příklad \"/Kg\""
+
+#: mcmp-price-per-unit.php:184
+msgid "Price Per Unit"
+msgstr "Cena Za Jednotku"
+
+#: mcmp-price-per-unit.php:192
+msgid "General price options"
+msgstr "Obecné nastavení ceny"
+
+#: mcmp-price-per-unit.php:193
+msgid "Settings which affects all products"
+msgstr "Nastavení, týkající se všech produktů"
+
+#: mcmp-price-per-unit.php:198
+msgid "General price additional text"
+msgstr "Přídavný text pro všechny ceny"
+
+#: mcmp-price-per-unit.php:199
+msgid ""
+"This text will be shown after every price text. You can modify it's "
+"appearance through CSS class mcmp-general-price-suffix."
+msgstr ""
+"Tento text bude zobrazen za každou cenou. Vzhled lze upravit přes CSS třídu "
+"mcmp-general-price-suffix."
+
+#: mcmp-price-per-unit.php:200
+msgid "Example \"Without Vat\""
+msgstr "Příklad \"bez DPH\""
+
+#: mcmp-price-per-unit.php:206
+msgid "Sale price - hide regular price"
+msgstr "Slevy - skrýt běžnou cenou"
+
+#: mcmp-price-per-unit.php:207
+msgid ""
+"When product is on sale it shows regular price and sale price. This will "
+"hide the regular price for all products."
+msgstr ""
+"Když je produkt ve slevě, cena je zobrazena jako běžná cena a zlevněná cena. "
+"Toto nastavení skryje běžnou cenu u všech zlevněných produktů."
+
+#: mcmp-price-per-unit.php:215
+msgid "Options for variable products"
+msgstr "Nastavení pro produkty s variantami"
+
+#: mcmp-price-per-unit.php:216
+msgid "These settings affect only variable products"
+msgstr "Tato nastavení ovlivní pouze produkty s variantami"
+
+#: mcmp-price-per-unit.php:221
+msgid "Variations - prefix for variable price"
+msgstr "Varianty - úvodní text pro proměnlivou cenu"
+
+#: mcmp-price-per-unit.php:222
+msgid ""
+"If the product is variable this text will be shown before the price. You can "
+"modify it's appearance through CSS class mcmp-variable-price-prefix."
+msgstr ""
+"Pokud má produkt varianty, tak bude tento text zobrazen před cenou. Vzhled "
+"lze upravit přes CSS třídu mcmp-variable-price-prefix."
+
+#: mcmp-price-per-unit.php:223
+msgid "Example \"From:\""
+msgstr "Příklad \"Již od:\""
+
+#: mcmp-price-per-unit.php:230
+msgid "Variations - Display only lower price"
+msgstr "Varianty - zobraz pouze nižší částku"
+
+#: mcmp-price-per-unit.php:231
+msgid ""
+"When displaying variation the price is displayed as \"$10-$25\". With this "
+"setting you will get just \"$10\""
+msgstr ""
+"Cena variant je zobrazována například takto \"10Kč-25Kč\". S tímto "
+"nastavením se zobrazí pouze \"10Kč\""
+
+#: mcmp-price-per-unit.php:239
+msgid "Price recalculation"
+msgstr "Přepočet ceny"
+
+#: mcmp-price-per-unit.php:240
+msgid "General settings for price recalculation"
+msgstr "Obecná nastavení pro přepočet ceny"
+
+#: mcmp-price-per-unit.php:245
+msgid "New row different styling"
+msgstr "Odlišit styl ceny v novém řádku"
+
+#: mcmp-price-per-unit.php:246
+msgid ""
+"When displaying price as new row, the new row will be displayed in italics "
+"with slightly smaller font size. For more styling you can use CSS class "
+"mcmp_recalc_price_row."
+msgstr ""
+"Při zobrazování ceny v novém řádku bude tento řádek zobrazen kurzívou a "
+"mírně menší velikostí. Vzhled lze upravit přes CSS třídu "
+"mcmp_recalc_price_row."
+
+#: mcmp-price-per-unit.php:258 mcmp-price-per-unit.php:272
+msgid "Do not show recalculated price"
+msgstr "Nezobrazovat přepočtenou cenu"
+
+#: mcmp-price-per-unit.php:282
+msgid ""
+"Will be shown immediatelly after recalculated prices. Can be overriden in "
+"product editor. Will be shown ONLY when recalculation takes place. You can "
+"modify it's appearance through CSS class mcmp-recalc-price-suffix."
+msgstr ""
+"Zobrazí se za přepočtenou cenou. Pro nahradit v editoru produktu. Bude "
+"zobrazen POUZE pokud k přepočtu dojde. Vzhled lze upravit přes CSS třídu "
+"mcmp-recalc-price-suffix."
+
+#~ msgid "This text will be shown after every price text."
+#~ msgstr "Tento text bude zobrazen za každou cenou."
