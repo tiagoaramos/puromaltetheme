@@ -381,7 +381,7 @@
 			} elseif (is_year()) { 
 				$keywords=preg_replace('/\s/',',',$title=get_the_date('Y'));
 			} elseif (is_search()) { 
-				$title=($_GET['s']) ? $SMTheme->_('search') : get_search_query();
+				$title=($_GET['s']) ? $WOWTheme->_('search') : get_search_query();
 				$keywords=preg_replace('/\s/',',',$title);
 				
 			} elseif (is_page()) {
