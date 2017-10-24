@@ -91,21 +91,21 @@ class WPSEO_Meta_Columns {
 		}
 
 		switch ( $column_name ) {
-			case 'wpseo-score' :
+			case 'wpseo-score':
 				echo $this->parse_column_score( $post_id );
 				break;
 			case 'wpseo-score-readability':
 				echo $this->parse_column_score_readability( $post_id );
 				break;
-			case 'wpseo-title' :
+			case 'wpseo-title':
 				echo esc_html( apply_filters( 'wpseo_title', wpseo_replace_vars( $this->page_title( $post_id ), get_post( $post_id, ARRAY_A ) ) ) );
 				break;
-			case 'wpseo-metadesc' :
+			case 'wpseo-metadesc':
 				$metadesc_val = apply_filters( 'wpseo_metadesc', wpseo_replace_vars( WPSEO_Meta::get_value( 'metadesc', $post_id ), get_post( $post_id, ARRAY_A ) ) );
 				$metadesc = ( '' === $metadesc_val ) ? '<span aria-hidden="true">&#8212;</span><span class="screen-reader-text">' . __( 'Meta description not set.', 'wordpress-seo' ) . '</span>' : esc_html( $metadesc_val );
 				echo $metadesc;
 				break;
-			case 'wpseo-focuskw' :
+			case 'wpseo-focuskw':
 				$focuskw_val = WPSEO_Meta::get_value( 'focuskw', $post_id );
 				$focuskw = ( '' === $focuskw_val ) ? '<span aria-hidden="true">&#8212;</span><span class="screen-reader-text">' . __( 'Focus keyword not set.', 'wordpress-seo' ) . '</span>' : esc_html( $focuskw_val );
 				echo $focuskw;
@@ -419,13 +419,12 @@ class WPSEO_Meta_Columns {
 	 * @return array Array containing the complete filter query.
 	 */
 	protected function build_filter_query( $vars, $filters ) {
-		$result = array( 'meta_query' => array() );
-
 		// If no filters were applied, just return everything.
 		if ( count( $filters ) === 0 ) {
-			return array_merge( $vars, $result );
+			return $vars;
 		}
 
+		$result = array( 'meta_query' => array() );
 		$result['meta_query'] = array_merge( $result['meta_query'], array( $this->determine_score_filters( $filters ) ) );
 
 		$current_seo_filter = $this->get_current_seo_filter();
@@ -449,9 +448,9 @@ class WPSEO_Meta_Columns {
 	protected function create_readability_score_filter( $low, $high ) {
 		return array(
 			array(
-				'key' => WPSEO_Meta::$meta_prefix . 'content_score',
-				'value' => array( $low, $high ),
-				'type' => 'numeric',
+				'key'     => WPSEO_Meta::$meta_prefix . 'content_score',
+				'value'   => array( $low, $high ),
+				'type'    => 'numeric',
 				'compare' => 'BETWEEN',
 			),
 		);
@@ -468,9 +467,9 @@ class WPSEO_Meta_Columns {
 	protected function create_seo_score_filter( $low, $high ) {
 		return array(
 			array(
-				'key' => WPSEO_Meta::$meta_prefix . 'linkdex',
-				'value' => array( $low, $high ),
-				'type' => 'numeric',
+				'key'     => WPSEO_Meta::$meta_prefix . 'linkdex',
+				'value'   => array( $low, $high ),
+				'type'    => 'numeric',
 				'compare' => 'BETWEEN',
 			),
 		);
@@ -520,13 +519,13 @@ class WPSEO_Meta_Columns {
 	 */
 	private function filter_order_by( $order_by ) {
 		switch ( $order_by ) {
-			case 'wpseo-metadesc' :
+			case 'wpseo-metadesc':
 				return  array(
 					'meta_key' => WPSEO_Meta::$meta_prefix . 'metadesc',
 					'orderby'  => 'meta_value',
 				);
 				break;
-			case 'wpseo-focuskw' :
+			case 'wpseo-focuskw':
 				return array(
 					'meta_key' => WPSEO_Meta::$meta_prefix . 'focuskw',
 					'orderby'  => 'meta_value',
