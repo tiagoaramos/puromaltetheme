@@ -145,8 +145,8 @@ class WC_Admin_Dashboard {
 
 		foreach ( wc_get_order_types( 'order-count' ) as $type ) {
 			$counts           = (array) wp_count_posts( $type );
-			$on_hold_count    += isset( $counts['wc-on-hold'] ) ? $counts['wc-on-hold'] : 0;
-			$processing_count += isset( $counts['wc-processing'] ) ? $counts['wc-processing'] : 0;
+			$on_hold_count    += isset( $counts['wc-ywraq-new'] ) ? $counts['wc-ywraq-new'] : 0;
+			$processing_count += isset( $counts['wc-processing'] ) ? $counts['wc-processing'] : 0; 
 		}
 		?>
 		<li class="processing-orders">
@@ -161,7 +161,7 @@ class WC_Admin_Dashboard {
 			</a>
 		</li>
 		<li class="on-hold-orders">
-			<a href="<?php echo admin_url( 'edit.php?post_status=wc-on-hold&post_type=shop_order' ); ?>">
+			<a href="<?php echo admin_url( 'edit.php?post_status=wc-ywraq-new&post_type=shop_order' ); ?>">
 				<?php
 					/* translators: %s: order count */
 					printf(
